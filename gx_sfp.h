@@ -35,6 +35,7 @@ typedef enum
    BALANCE, 
    EXPANDER, 
    TONE, 
+   TRIM, 
 } PortIndex;
 
 #endif //SRC_HEADERS_GXEFFECTS_H_
