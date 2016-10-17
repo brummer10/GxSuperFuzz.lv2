@@ -7,12 +7,25 @@
 	INSTALL_DIR = ~/.lv2
 	endif
 
-	ifneq (cat /proc/cpuinfo | grep sse2 >/dev/null,)
-	SSE_CFLAGS = -msse2 -mfpmath=sse
-	else ifneq (cat /proc/cpuinfo | grep sse >/dev/null,)
-	SSE_CFLAGS = -msse -mfpmath=sse
+	# check CPU and supported optimization flags
+	ifneq ($(shell cat /proc/cpuinfo | grep sse3 ) , )
+		SSE_CFLAGS = -msse3 -mfpmath=sse
+	else ifneq ($(shell cat /proc/cpuinfo | grep sse2 ) , )
+		SSE_CFLAGS = -msse2 -mfpmath=sse
+	else ifneq ($(shell cat /proc/cpuinfo | grep sse ) , )
+		SSE_CFLAGS = -msse -mfpmath=sse
+		else ifneq ($(shell cat /proc/cpuinfo | grep ARM ) , )
+		ifneq ($(shell cat /proc/cpuinfo | grep ARMv7 ) , )
+			ifneq ($(shell cat /proc/cpuinfo | grep vfpd32 ) , )
+				SSE_CFLAGS = -march=armv7 -mfpu=vfpv3 
+			else ifneq ($(shell cat /proc/cpuinfo | grep vfpv3 ) , )
+				SSE_CFLAGS = -march=armv7 -mfpu=vfpv3
+			endif
+		else
+			ARMCPU = "YES"
+		endif
 	else
-	SSE_CFLAGS = ""
+		SSE_CFLAGS =
 	endif
 
 	# set bundle name
@@ -31,13 +44,19 @@
 
 .PHONY : all clean install uninstall 
 
-all : $(NAME)
+all : check $(NAME)
 	@mkdir -p ./$(BUNDLE)
 	@cp ./*.ttl ./$(BUNDLE)
 	@mv ./*.so ./$(BUNDLE)
 	@if [ -f ./$(BUNDLE)/$(NAME).so ]; then echo $(BLUE)"build finish, now run make install"; \
 	else echo $(RED)"sorry, build failed"; fi
 	@echo $(NONE)
+
+check :
+ifdef ARMCPU
+	@echo $(RED)ARM CPU DEDECTED, please check the optimization flags
+	@echo $(NONE)
+endif
 
 clean :
 	@rm -f $(NAME).so
