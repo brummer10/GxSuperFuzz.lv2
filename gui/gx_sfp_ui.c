@@ -83,7 +83,7 @@ static LV2UI_Handle instantiate(const LV2UI_Descriptor*   descriptor,
     gtk_widget_modify_font(ui->logo, style->font_desc);
 
     ui->pbox = gx_paint_box_new(GTK_ORIENTATION_VERTICAL,false, 0);
-    set_expose_func(GX_PAINT_BOX(ui->pbox),"pedal_expose");
+    set_expose_func(GX_SF_PAINT_BOX(ui->pbox),"pedal_expose");
     ui->box = gtk_vbox_new(FALSE, 4);
     ui->hbox = gtk_hbox_new(TRUE, 10);
     gtk_container_set_border_width(GTK_CONTAINER(ui->hbox),25);
