@@ -11,7 +11,7 @@
         modgui:brand "Guitarix" ;
         modgui:label "GxSuperFuzz" ;
         modgui:model "boxy" ;
-        modgui:panel "1-select-2-knobs" ;
+        modgui:panel "3-knobs" ;
         modgui:color "sufu" ;
         modgui:knob "cairo" ;
         modgui:port [
@@ -26,5 +26,9 @@
             lv2:index 2 ;
             lv2:symbol "BALANCE" ;
             lv2:name "BALANCE" ;
+        ] , [
+            lv2:index 3 ;
+            lv2:symbol "TRIM" ;
+            lv2:name "TRIM" ;
         ] ;
     ] .
