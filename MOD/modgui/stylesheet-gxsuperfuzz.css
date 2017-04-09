@@ -67,17 +67,6 @@
     padding:3px 9px 0;
 }
 
-.mod-pedal-boxy{{{cns}}}.mod-five-knobs .mod-plugin-brand,
-.mod-pedal-boxy{{{cns}}}.mod-six-knobs .mod-plugin-brand,
-.mod-pedal-boxy{{{cns}}}.mod-seven-knobs .mod-plugin-brand,
-.mod-pedal-boxy{{{cns}}}.mod-eight-knobs .mod-plugin-brand {
-    top:190px;
-}
-
-.mod-pedal-boxy{{{cns}}}.mod-boxy50 .mod-plugin-brand {
-  top:16px;
-}
-
 .mod-pedal-boxy{{{cns}}}.mod-one-footswitch-presets .mod-plugin-brand {
   top:12px;
 }
@@ -100,18 +89,6 @@
     line-height:1;
 }
 
-.mod-pedal-boxy{{{cns}}}.mod-five-knobs .mod-plugin-name,
-.mod-pedal-boxy{{{cns}}}.mod-six-knobs .mod-plugin-name,
-.mod-pedal-boxy{{{cns}}}.mod-seven-knobs .mod-plugin-name,
-.mod-pedal-boxy{{{cns}}}.mod-eight-knobs .mod-plugin-name {
-    top:350px;
-}
-
-.mod-pedal-boxy{{{cns}}}.mod-boxy50 .mod-plugin-name {
-  top:230px;
-}
-
-
 /* = LIGHT ON/OFF
 ================================================ */
 .mod-pedal-boxy{{{cns}}} .mod-light {
@@ -124,21 +101,9 @@
     top:235px;
 }
 
-.mod-pedal-boxy{{{cns}}}.mod-five-knobs .mod-light,
-.mod-pedal-boxy{{{cns}}}.mod-six-knobs .mod-light,
-.mod-pedal-boxy{{{cns}}}.mod-seven-knobs .mod-light,
-.mod-pedal-boxy{{{cns}}}.mod-eight-knobs .mod-light {
-    top:253px;
-}
-
-.mod-pedal-boxy{{{cns}}}.mod-boxy50 .mod-light {
-  top:105px;
-}
-
 .mod-pedal-boxy{{{cns}}}.mod-one-footswitch-presets .mod-light {
   top:120px;
 }
-
 
 /* = FOOTSWITCH
 ================================================ */
@@ -160,22 +125,6 @@
     background-position-y: top !important
 }
 
-.mod-pedal-boxy{{{cns}}}.mod-five-knobs .mod-footswitch,
-.mod-pedal-boxy{{{cns}}}.mod-six-knobs .mod-footswitch,
-.mod-pedal-boxy{{{cns}}}.mod-seven-knobs .mod-footswitch,
-.mod-pedal-boxy{{{cns}}}.mod-eight-knobs .mod-footswitch {
-    top:285px;
-}
-
-.mod-pedal-boxy{{{cns}}}.mod-boxy50 .mod-footswitch {
-    top:140px;
-}
-
-.mod-pedal-boxy{{{cns}}}.mod-one-footswitch-presets .mod-footswitch {
-    top:170px;
-}
-
-
 /* = KNOBS
 ================================================ */
 .mod-pedal-boxy{{{cns}}} .mod-control-group {
@@ -185,23 +134,21 @@
     z-index:30;
 }
 .mod-pedal-boxy{{{cns}}} .top {
-    margin-top:0px !important;
+    margin-top:30px !important;
+}
+.mod-pedal-boxy{{{cns}}} .bottom {
+    top:65px !important;
+    margin:160px !important;
 }
 
-.mod-pedal-boxy{{{cns}}}.mod-one-footswitch-presets .mod-control-group {
-    margin:10px !important;
-    top:75px;
-}
-
-.mod-pedal-boxy{{{cns}}}.mod-one-footswitch-presets .mod-control-group > select {
-    width:100%;
-}
-
+.mod-pedal-boxy{{{cns}}} .mod-control-group .mod-knob-trim,
+.mod-pedal-boxy{{{cns}}} .mod-control-group .mod-knob-tone,
 .mod-pedal-boxy{{{cns}}} .mod-control-group .mod-knob {
     overflow:hidden;
     position:relative;
 }
 
+.mod-pedal-boxy{{{cns}}} .mod-control-group .mod-knob-tone > span.mod-knob-title,
 .mod-pedal-boxy{{{cns}}} .mod-control-group .mod-knob > span.mod-knob-title {
     bottom:0px;
     display:block;
@@ -217,51 +164,24 @@
     right:0;
     text-transform:uppercase;
 }
-
-/* ONE KNOB */
-.mod-pedal-boxy{{{cns}}}.mod-one-knob .mod-control-group .mod-knob .mod-knob-image {
-    background-image:url(/resources/knobs/boxy/boxy.png{{{ns}}});
-    background-repeat:no-repeat;
-    background-size:auto 98px;
-    height:98px;
-    width:98px;
-    margin:0 auto;
-}
-.mod-pedal-boxy{{{cns}}}.mod-one-knob .mod-control-group .mod-knob > span.mod-knob-title {
-    font-size:15px;
-    height:15px;
-}
-.mod-pedal-boxy{{{cns}}}.mod-one-knob .mod-control-group .mod-knob {
-    height:115px;
-}
-
-/* TWO KNOBS */
-.mod-pedal-boxy{{{cns}}}.mod-two-knobs .mod-control-group .mod-knob .mod-knob-image {
-    background-image:url(/resources/knobs/boxy/boxy.png{{{ns}}});
-    background-repeat:no-repeat;
-    background-size:auto 90px;
-    height:90px;
-    width:90px;
-    margin:0 auto;
-}
-.mod-pedal-boxy{{{cns}}}.mod-two-knobs .mod-control-group .mod-knob > span.mod-knob-title {
-    font-size:13px;
-}
-.mod-pedal-boxy{{{cns}}}.mod-two-knobs .mod-control-group .mod-knob {
-    float:left;
-    width:50%;
-}
-.mod-pedal-boxy{{{cns}}}.mod-two-knobs .mod-control-group .mod-knob {
-    height:103px;
+.mod-pedal-boxy{{{cns}}} .mod-control-group .mod-knob-trim > span.mod-knob-title {
+    bottom:0px;
+    display:block;
+    font-size:10px;
+    font-weight:bold;
+    height:12px;
+    left:0;
+    line-height:1;
+    margin:0;
+    overflow:hidden;
+    padding:0;
+    position:absolute;
+    right:0;
+    text-transform:uppercase;
 }
 
 /* THREE AND HIGHER KNOBS */
-.mod-pedal-boxy{{{cns}}}.mod-three-knobs .mod-control-group .mod-knob .mod-knob-image,
-.mod-pedal-boxy{{{cns}}}.mod-four-knobs .mod-control-group .mod-knob .mod-knob-image,
-.mod-pedal-boxy{{{cns}}}.mod-five-knobs .mod-control-group .mod-knob .mod-knob-image,
-.mod-pedal-boxy{{{cns}}}.mod-six-knobs .mod-control-group .mod-knob .mod-knob-image,
-.mod-pedal-boxy{{{cns}}}.mod-seven-knobs .mod-control-group .mod-knob .mod-knob-image,
-.mod-pedal-boxy{{{cns}}}.mod-eight-knobs .mod-control-group .mod-knob .mod-knob-image {
+.mod-pedal-boxy{{{cns}}}.mod-three-knobs .mod-control-group .mod-knob .mod-knob-image {
     background-image:url(/resources/knobs/boxy/cairo.png{{{ns}}});
     background-repeat:no-repeat;
     background-size:auto 60px;
@@ -269,19 +189,30 @@
     width:60px;
     margin:0 auto;
 }
-.mod-pedal-boxy{{{cns}}}.mod-three-knobs .mod-control-group .mod-knob,
-.mod-pedal-boxy{{{cns}}}.mod-four-knobs .mod-control-group .mod-knob,
-.mod-pedal-boxy{{{cns}}}.mod-five-knobs .mod-control-group .mod-knob,
-.mod-pedal-boxy{{{cns}}}.mod-six-knobs .mod-control-group .mod-knob,
-.mod-pedal-boxy{{{cns}}}.mod-seven-knobs .mod-control-group .mod-knob,
-.mod-pedal-boxy{{{cns}}}.mod-eight-knobs .mod-control-group .mod-knob {
+.mod-pedal-boxy{{{cns}}}.mod-three-knobs .mod-control-group .mod-knob-tone .mod-knob-image {
+    background-image:url(/resources/knobs/boxy/tone.png{{{ns}}});
+    background-repeat:no-repeat;
+    background-size:auto 60px;
+    height:60px;
+    width:60px;
+    margin:0 auto;
+}
+.mod-pedal-boxy{{{cns}}}.mod-three-knobs .mod-control-group .mod-knob-trim .mod-knob-image {
+    background-image:url(/resources/knobs/boxy/cairo.png{{{ns}}});
+    background-repeat:no-repeat;
+    background-size:auto 30px;
+    height:30px;
+    width:30px;
+    margin:0 auto;
+}
+.mod-pedal-boxy{{{cns}}}.mod-three-knobs .mod-control-group .mod-knob-tone,
+.mod-pedal-boxy{{{cns}}}.mod-three-knobs .mod-control-group .mod-knob {
     display:inline-block;
     height:73px;
 }
-
-/* EIGTH KNOBS */
-.mod-pedal-boxy{{{cns}}}.mod-eight-knobs .mod-knob {
-    width:70px;
+.mod-pedal-boxy{{{cns}}}.mod-three-knobs .mod-control-group .mod-knob-trim {
+    display:inline-block;
+    height:46px;
 }
 
 /* = ENUMERATED LIST
@@ -365,13 +296,15 @@
 }
 
 .mod-pedal-boxy{{{cns}}}.mod-sufu .mod-enumerated,
+.mod-pedal-boxy{{{cns}}}.mod-sufu .mod-control-group .mod-knob-tone > span.mod-knob-title,
+.mod-pedal-boxy{{{cns}}}.mod-sufu .mod-control-group .mod-knob-trim > span.mod-knob-title,
 .mod-pedal-boxy{{{cns}}}.mod-sufu .mod-control-group .mod-knob > span.mod-knob-title
 {
     color:white;
 }
 .mod-pedal-boxy{{{cns}}}.mod-sufu h1
 {
-    color:#262626 ;
+    color:black ;
 }
 /* STYLES FOR THE BOXY KNOB */
 
@@ -379,5 +312,11 @@
 /* = KNOBS
 ================================================ */
 .mod-pedal-boxy{{{cns}}} .mod-control-group.mod-cairo .mod-knob .mod-knob-image {
+    background-image:url(/resources/knobs/boxy/cairo.png{{{ns}}});
+}
+.mod-pedal-boxy{{{cns}}} .mod-control-group.mod-cairo .mod-knob-tone .mod-knob-image {
+    background-image:url(/resources/knobs/boxy/tone.png{{{ns}}});
+}
+.mod-pedal-boxy{{{cns}}} .mod-control-group.mod-cairo .mod-knob-trim .mod-knob-image {
     background-image:url(/resources/knobs/boxy/cairo.png{{{ns}}});
 }
