@@ -246,10 +246,13 @@ static void port_event(LV2UI_Handle handle,
                    const void*  buffer) {
 
     gx_sfpUI* ui = (gx_sfpUI*)handle;
-	if ( format == 0 ) {
-        ui->block = 1;
+    if ( format == 0 ) {
         float *value = (float*)buffer;
-        gtk_adjustment_set_value(GTK_ADJUSTMENT(ui->adj[port_index-2]), (gdouble) (*value));
+        float v = gtk_adjustment_get_value(GTK_ADJUSTMENT(ui->adj[port_index-2]));
+        if (v != (*value)) {
+            ui->block = 1;
+            gtk_adjustment_set_value(GTK_ADJUSTMENT(ui->adj[port_index-2]), (gdouble) (*value));
+        }
     }
 
 }
