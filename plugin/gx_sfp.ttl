@@ -47,7 +47,7 @@
     lv2:project <http://guitarix.sourceforge.net/plugins/gx_sfp_> ;
     lv2:optionalFeature lv2:hardRTCapable ;
       
-    lv2:minorVersion 34;
+    lv2:minorVersion 35;
     lv2:microVersion 0;
 
   guiext:ui <http://guitarix.sourceforge.net/plugins/gx_sfp_gui#_sfp_>;
@@ -115,7 +115,8 @@ rdfs:comment """
     ] .
 
 <http://guitarix.sourceforge.net/plugins/gx_sfp_gui#_sfp_>
-  a guiext:GtkUI;
+  a guiext:X11UI;
   guiext:binary <gx_sfp_ui.so>;
-  guiext:requiredFeature guiext:makeResident;
+        lv2:extensionData guiext::idle ; 
+        lv2:requiredFeature guiext:makeResident;
   .
