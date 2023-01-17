@@ -71,7 +71,7 @@ void gx_gui_register_controller_message(gx_sfpUI *ui) {
 void gx_gui_destroy_main_window(gx_sfpUI *ui) {
 	DestroyWindow(ui->win);
 	// safe to use: doesnt unregister if there are still windows of this class
-	UnregisterClass(TEXT("gx_DrawSurfaceClass"), NULL);
+	UnregisterClass(TEXT("gx_sfpUIClass"), NULL);
 }
 
 void gx_gui_resize_surface(gx_sfpUI *ui) {
